@@ -1,0 +1,491 @@
+[gd_scene load_steps=97 format=2]
+
+[ext_resource path="res://layerasset.gd" type="Script" id=1]
+[ext_resource path="res://body/male/frame/darkelf2.png" type="Texture" id=2]
+
+[sub_resource type="Animation" id=1]
+resource_name = "idle0"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 39 ]
+}
+
+[sub_resource type="Animation" id=2]
+resource_name = "idle1"
+length = 0.1
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 26 ]
+}
+
+[sub_resource type="Animation" id=3]
+resource_name = "idle2"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 13 ]
+}
+
+[sub_resource type="Animation" id=4]
+resource_name = "idle3"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 0 ]
+}
+
+[sub_resource type="Animation" id=5]
+resource_name = "spellcast0"
+length = 0.7
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 39, 40, 41, 42, 43, 44, 45 ]
+}
+tracks/1/type = "method"
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0.6 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "spell_complete"
+} ]
+}
+
+[sub_resource type="Animation" id=6]
+resource_name = "spellcast1"
+length = 0.7
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 26, 27, 28, 29, 30, 31, 32 ]
+}
+tracks/1/type = "method"
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0.6 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "spell_complete"
+} ]
+}
+
+[sub_resource type="Animation" id=7]
+resource_name = "spellcast2"
+length = 0.7
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 13, 14, 15, 16, 17, 18, 19 ]
+}
+tracks/1/type = "method"
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0.6 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "spell_complete"
+} ]
+}
+
+[sub_resource type="Animation" id=8]
+resource_name = "spellcast3"
+length = 0.7
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 1, 2, 3, 4, 5, 6 ]
+}
+tracks/1/type = "method"
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0.6 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "spell_complete"
+} ]
+}
+
+[sub_resource type="Animation" id=9]
+length = 0.8
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 144, 145, 146, 147, 148, 149, 150, 151 ]
+}
+
+[sub_resource type="Animation" id=10]
+length = 0.8
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 131, 132, 133, 134, 135, 136, 137, 138 ]
+}
+
+[sub_resource type="Animation" id=11]
+length = 0.8
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 118, 119, 120, 121, 122, 123, 124, 125 ]
+}
+
+[sub_resource type="Animation" id=12]
+length = 0.8
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 105, 106, 107, 108, 109, 110, 111, 112 ]
+}
+
+[sub_resource type="AnimationNodeAnimation" id=54]
+animation = "idle0"
+
+[sub_resource type="AnimationNodeAnimation" id=13]
+animation = "idle1"
+
+[sub_resource type="AnimationNodeAnimation" id=55]
+animation = "idle2"
+
+[sub_resource type="AnimationNodeAnimation" id=56]
+animation = "idle3"
+
+[sub_resource type="AnimationNodeAnimation" id=52]
+animation = "spellcast0"
+
+[sub_resource type="AnimationNodeAnimation" id=53]
+animation = "spellcast1"
+
+[sub_resource type="AnimationNodeAnimation" id=16]
+animation = "spellcast2"
+
+[sub_resource type="AnimationNodeAnimation" id=17]
+animation = "spellcast3"
+
+[sub_resource type="AnimationNodeAnimation" id=18]
+animation = "walk0"
+
+[sub_resource type="AnimationNodeAnimation" id=19]
+animation = "walk1"
+
+[sub_resource type="AnimationNodeAnimation" id=20]
+animation = "walk2"
+
+[sub_resource type="AnimationNodeAnimation" id=21]
+animation = "walk3"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=57]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=59]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=61]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=64]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=65]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=66]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=67]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=68]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=69]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=70]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=71]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=72]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=73]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=74]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=75]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=76]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=77]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=78]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=79]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=80]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=81]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=82]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=83]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=84]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=85]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=86]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=87]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=88]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=89]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=90]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=91]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=92]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=93]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=94]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=95]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=96]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=97]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=98]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=99]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=100]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=101]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=102]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=103]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=104]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=105]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=106]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=107]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=108]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=109]
+switch_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=110]
+switch_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=111]
+switch_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=112]
+switch_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=113]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=114]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=115]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=116]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=117]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=118]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=119]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=120]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=121]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=122]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=123]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=124]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=125]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=126]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=127]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=128]
+
+[sub_resource type="AnimationNodeStateMachine" id=50]
+states/idle0/node = SubResource( 54 )
+states/idle0/position = Vector2( 794.336, 342.07 )
+states/idle1/node = SubResource( 13 )
+states/idle1/position = Vector2( 620.727, 560.46 )
+states/idle2/node = SubResource( 55 )
+states/idle2/position = Vector2( 305.667, 450.641 )
+states/idle3/node = SubResource( 56 )
+states/idle3/position = Vector2( 451, 280.757 )
+states/spellcast0/node = SubResource( 52 )
+states/spellcast0/position = Vector2( 973.667, 342.364 )
+states/spellcast1/node = SubResource( 53 )
+states/spellcast1/position = Vector2( 621.489, 684.393 )
+states/spellcast2/node = SubResource( 16 )
+states/spellcast2/position = Vector2( 101, 450.778 )
+states/spellcast3/node = SubResource( 17 )
+states/spellcast3/position = Vector2( 451.496, 139.371 )
+states/walk0/node = SubResource( 18 )
+states/walk0/position = Vector2( 795.003, 437.911 )
+states/walk1/node = SubResource( 19 )
+states/walk1/position = Vector2( 450.455, 561.04 )
+states/walk2/node = SubResource( 20 )
+states/walk2/position = Vector2( 312.333, 350.331 )
+states/walk3/node = SubResource( 21 )
+states/walk3/position = Vector2( 604.688, 281.801 )
+transitions = [ "idle2", "spellcast2", SubResource( 57 ), "idle1", "spellcast1", SubResource( 59 ), "idle0", "spellcast0", SubResource( 61 ), "idle3", "spellcast3", SubResource( 64 ), "idle2", "walk2", SubResource( 65 ), "walk2", "idle2", SubResource( 66 ), "idle2", "walk1", SubResource( 67 ), "walk1", "idle2", SubResource( 68 ), "idle2", "walk0", SubResource( 69 ), "walk0", "idle2", SubResource( 70 ), "walk3", "idle2", SubResource( 71 ), "idle2", "walk3", SubResource( 72 ), "idle3", "walk3", SubResource( 73 ), "walk3", "idle3", SubResource( 74 ), "idle3", "walk2", SubResource( 75 ), "walk2", "idle3", SubResource( 76 ), "idle3", "walk1", SubResource( 77 ), "walk1", "idle3", SubResource( 78 ), "idle3", "walk0", SubResource( 79 ), "walk0", "idle3", SubResource( 80 ), "walk2", "idle1", SubResource( 81 ), "idle1", "walk2", SubResource( 82 ), "idle1", "walk3", SubResource( 83 ), "walk3", "idle1", SubResource( 84 ), "idle1", "walk1", SubResource( 85 ), "walk1", "idle1", SubResource( 86 ), "idle1", "walk0", SubResource( 87 ), "walk0", "idle1", SubResource( 88 ), "idle0", "walk1", SubResource( 89 ), "walk1", "idle0", SubResource( 90 ), "idle0", "walk0", SubResource( 91 ), "walk0", "idle0", SubResource( 92 ), "idle0", "walk3", SubResource( 93 ), "walk3", "idle0", SubResource( 94 ), "idle0", "walk2", SubResource( 95 ), "walk2", "idle0", SubResource( 96 ), "walk2", "walk3", SubResource( 97 ), "walk3", "walk2", SubResource( 98 ), "walk2", "walk1", SubResource( 99 ), "walk1", "walk2", SubResource( 100 ), "walk1", "walk0", SubResource( 101 ), "walk0", "walk1", SubResource( 102 ), "walk0", "walk3", SubResource( 103 ), "walk3", "walk0", SubResource( 104 ), "walk0", "walk2", SubResource( 105 ), "walk2", "walk0", SubResource( 106 ), "walk3", "walk1", SubResource( 107 ), "walk1", "walk3", SubResource( 108 ), "spellcast2", "idle2", SubResource( 109 ), "spellcast1", "idle1", SubResource( 110 ), "spellcast0", "idle0", SubResource( 111 ), "spellcast3", "idle3", SubResource( 112 ), "spellcast2", "walk1", SubResource( 113 ), "spellcast2", "walk2", SubResource( 114 ), "spellcast2", "walk3", SubResource( 115 ), "spellcast2", "walk0", SubResource( 116 ), "spellcast1", "walk1", SubResource( 117 ), "spellcast1", "walk0", SubResource( 118 ), "spellcast1", "walk3", SubResource( 119 ), "spellcast1", "walk2", SubResource( 120 ), "spellcast0", "walk0", SubResource( 121 ), "spellcast0", "walk1", SubResource( 122 ), "spellcast0", "walk2", SubResource( 123 ), "spellcast0", "walk3", SubResource( 124 ), "spellcast3", "walk2", SubResource( 125 ), "spellcast3", "walk1", SubResource( 126 ), "spellcast3", "walk0", SubResource( 127 ), "spellcast3", "walk3", SubResource( 128 ) ]
+start_node = "idle1"
+graph_offset = Vector2( 0, 69.5291 )
+
+[sub_resource type="AnimationNodeStateMachinePlayback" id=51]
+
+[node name="layerasset" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="Sprite" type="Sprite" parent="."]
+texture = ExtResource( 2 )
+hframes = 13
+vframes = 21
+frame = 26
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/idle0 = SubResource( 1 )
+anims/idle1 = SubResource( 2 )
+anims/idle2 = SubResource( 3 )
+anims/idle3 = SubResource( 4 )
+anims/spellcast0 = SubResource( 5 )
+anims/spellcast1 = SubResource( 6 )
+anims/spellcast2 = SubResource( 7 )
+anims/spellcast3 = SubResource( 8 )
+anims/walk0 = SubResource( 9 )
+anims/walk1 = SubResource( 10 )
+anims/walk2 = SubResource( 11 )
+anims/walk3 = SubResource( 12 )
+
+[node name="AnimationTree" type="AnimationTree" parent="."]
+tree_root = SubResource( 50 )
+anim_player = NodePath("../AnimationPlayer")
+active = true
+parameters/playback = SubResource( 51 )
+
+[connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_AnimationPlayer_animation_finished"]

@@ -1,0 +1,34 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://main.gd" type="Script" id=2]
+
+[node name="main" type="Node2D"]
+script = ExtResource( 2 )
+
+[node name="player" parent="." instance=ExtResource( 1 )]
+gender = "male"
+path_to_cape = "res://body/male/cape/cape_white_male.png"
+path_to_frame = "res://body/male/frame/red_orc.png"
+path_to_head = "res://body/male/head/hood_male.png"
+path_to_torso = "res://body/male/torso/chest_male.png"
+path_to_legs = "res://body/male/legs/robe_skirt_male.png"
+path_to_feet = "res://body/male/feet/brown_shoes_male.png"
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+margin_left = 407.0
+margin_top = 349.0
+margin_right = 795.0
+margin_bottom = 389.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="."]
+margin_left = 415.0
+margin_top = 424.0
+margin_right = 701.0
+margin_bottom = 475.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
