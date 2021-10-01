@@ -1,4 +1,4 @@
-[gd_scene load_steps=97 format=2]
+[gd_scene load_steps=121 format=2]
 
 [ext_resource path="res://layerasset.gd" type="Script" id=1]
 [ext_resource path="res://body/male/frame/darkelf2.png" type="Texture" id=2]
@@ -69,7 +69,70 @@ tracks/0/keys = {
 }
 
 [sub_resource type="Animation" id=5]
-resource_name = "spellcast0"
+resource_name = "slash0"
+length = 0.6
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 195, 196, 197, 198, 199, 200 ]
+}
+
+[sub_resource type="Animation" id=6]
+resource_name = "slash1"
+length = 0.6
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 182, 183, 184, 185, 186, 187 ]
+}
+
+[sub_resource type="Animation" id=7]
+resource_name = "slash2"
+length = 0.6
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 169, 170, 171, 172, 173, 174 ]
+}
+
+[sub_resource type="Animation" id=8]
+resource_name = "slash3"
+length = 0.6
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 156, 157, 158, 159, 160, 161 ]
+}
+
+[sub_resource type="Animation" id=9]
 length = 0.7
 tracks/0/type = "value"
 tracks/0/path = NodePath("Sprite:frame")
@@ -98,8 +161,7 @@ tracks/1/keys = {
 } ]
 }
 
-[sub_resource type="Animation" id=6]
-resource_name = "spellcast1"
+[sub_resource type="Animation" id=10]
 length = 0.7
 tracks/0/type = "value"
 tracks/0/path = NodePath("Sprite:frame")
@@ -128,8 +190,7 @@ tracks/1/keys = {
 } ]
 }
 
-[sub_resource type="Animation" id=7]
-resource_name = "spellcast2"
+[sub_resource type="Animation" id=11]
 length = 0.7
 tracks/0/type = "value"
 tracks/0/path = NodePath("Sprite:frame")
@@ -158,8 +219,7 @@ tracks/1/keys = {
 } ]
 }
 
-[sub_resource type="Animation" id=8]
-resource_name = "spellcast3"
+[sub_resource type="Animation" id=12]
 length = 0.7
 tracks/0/type = "value"
 tracks/0/path = NodePath("Sprite:frame")
@@ -188,7 +248,7 @@ tracks/1/keys = {
 } ]
 }
 
-[sub_resource type="Animation" id=9]
+[sub_resource type="Animation" id=13]
 length = 0.8
 loop = true
 tracks/0/type = "value"
@@ -204,7 +264,7 @@ tracks/0/keys = {
 "values": [ 144, 145, 146, 147, 148, 149, 150, 151 ]
 }
 
-[sub_resource type="Animation" id=10]
+[sub_resource type="Animation" id=14]
 length = 0.8
 loop = true
 tracks/0/type = "value"
@@ -220,7 +280,7 @@ tracks/0/keys = {
 "values": [ 131, 132, 133, 134, 135, 136, 137, 138 ]
 }
 
-[sub_resource type="Animation" id=11]
+[sub_resource type="Animation" id=15]
 length = 0.8
 loop = true
 tracks/0/type = "value"
@@ -236,7 +296,7 @@ tracks/0/keys = {
 "values": [ 118, 119, 120, 121, 122, 123, 124, 125 ]
 }
 
-[sub_resource type="Animation" id=12]
+[sub_resource type="Animation" id=16]
 length = 0.8
 loop = true
 tracks/0/type = "value"
@@ -252,47 +312,115 @@ tracks/0/keys = {
 "values": [ 105, 106, 107, 108, 109, 110, 111, 112 ]
 }
 
-[sub_resource type="AnimationNodeAnimation" id=54]
+[sub_resource type="AnimationNodeAnimation" id=17]
 animation = "idle0"
 
-[sub_resource type="AnimationNodeAnimation" id=13]
+[sub_resource type="AnimationNodeAnimation" id=18]
 animation = "idle1"
 
-[sub_resource type="AnimationNodeAnimation" id=55]
+[sub_resource type="AnimationNodeAnimation" id=19]
 animation = "idle2"
 
-[sub_resource type="AnimationNodeAnimation" id=56]
+[sub_resource type="AnimationNodeAnimation" id=20]
 animation = "idle3"
 
-[sub_resource type="AnimationNodeAnimation" id=52]
+[sub_resource type="AnimationNodeAnimation" id=21]
+animation = "slash0"
+
+[sub_resource type="AnimationNodeAnimation" id=22]
+animation = "slash1"
+
+[sub_resource type="AnimationNodeAnimation" id=23]
+animation = "slash2"
+
+[sub_resource type="AnimationNodeAnimation" id=24]
+animation = "slash3"
+
+[sub_resource type="AnimationNodeAnimation" id=25]
 animation = "spellcast0"
 
-[sub_resource type="AnimationNodeAnimation" id=53]
+[sub_resource type="AnimationNodeAnimation" id=26]
 animation = "spellcast1"
 
-[sub_resource type="AnimationNodeAnimation" id=16]
+[sub_resource type="AnimationNodeAnimation" id=27]
 animation = "spellcast2"
 
-[sub_resource type="AnimationNodeAnimation" id=17]
+[sub_resource type="AnimationNodeAnimation" id=28]
 animation = "spellcast3"
 
-[sub_resource type="AnimationNodeAnimation" id=18]
+[sub_resource type="AnimationNodeAnimation" id=29]
 animation = "walk0"
 
-[sub_resource type="AnimationNodeAnimation" id=19]
+[sub_resource type="AnimationNodeAnimation" id=30]
 animation = "walk1"
 
-[sub_resource type="AnimationNodeAnimation" id=20]
+[sub_resource type="AnimationNodeAnimation" id=31]
 animation = "walk2"
 
-[sub_resource type="AnimationNodeAnimation" id=21]
+[sub_resource type="AnimationNodeAnimation" id=32]
 animation = "walk3"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=33]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=34]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=35]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=36]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=37]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=38]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=39]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=40]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=41]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=42]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=43]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=44]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=45]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=46]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=47]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=48]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=49]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=50]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=51]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=52]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=53]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=54]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=55]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=56]
 
 [sub_resource type="AnimationNodeStateMachineTransition" id=57]
 
+[sub_resource type="AnimationNodeStateMachineTransition" id=58]
+
 [sub_resource type="AnimationNodeStateMachineTransition" id=59]
 
+[sub_resource type="AnimationNodeStateMachineTransition" id=60]
+
 [sub_resource type="AnimationNodeStateMachineTransition" id=61]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=62]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=63]
 
 [sub_resource type="AnimationNodeStateMachineTransition" id=64]
 
@@ -329,12 +457,16 @@ animation = "walk3"
 [sub_resource type="AnimationNodeStateMachineTransition" id=80]
 
 [sub_resource type="AnimationNodeStateMachineTransition" id=81]
+switch_mode = 2
 
 [sub_resource type="AnimationNodeStateMachineTransition" id=82]
+switch_mode = 2
 
 [sub_resource type="AnimationNodeStateMachineTransition" id=83]
+switch_mode = 2
 
 [sub_resource type="AnimationNodeStateMachineTransition" id=84]
+switch_mode = 2
 
 [sub_resource type="AnimationNodeStateMachineTransition" id=85]
 
@@ -369,95 +501,91 @@ animation = "walk3"
 [sub_resource type="AnimationNodeStateMachineTransition" id=100]
 
 [sub_resource type="AnimationNodeStateMachineTransition" id=101]
+switch_mode = 2
+auto_advance = true
 
 [sub_resource type="AnimationNodeStateMachineTransition" id=102]
 
 [sub_resource type="AnimationNodeStateMachineTransition" id=103]
 
 [sub_resource type="AnimationNodeStateMachineTransition" id=104]
+switch_mode = 2
+auto_advance = true
 
 [sub_resource type="AnimationNodeStateMachineTransition" id=105]
 
 [sub_resource type="AnimationNodeStateMachineTransition" id=106]
+switch_mode = 2
+auto_advance = true
 
 [sub_resource type="AnimationNodeStateMachineTransition" id=107]
 
 [sub_resource type="AnimationNodeStateMachineTransition" id=108]
+switch_mode = 2
+auto_advance = true
 
 [sub_resource type="AnimationNodeStateMachineTransition" id=109]
-switch_mode = 2
 
 [sub_resource type="AnimationNodeStateMachineTransition" id=110]
 switch_mode = 2
+auto_advance = true
 
 [sub_resource type="AnimationNodeStateMachineTransition" id=111]
-switch_mode = 2
 
 [sub_resource type="AnimationNodeStateMachineTransition" id=112]
 switch_mode = 2
+auto_advance = true
 
 [sub_resource type="AnimationNodeStateMachineTransition" id=113]
 
 [sub_resource type="AnimationNodeStateMachineTransition" id=114]
+switch_mode = 2
+auto_advance = true
 
 [sub_resource type="AnimationNodeStateMachineTransition" id=115]
 
 [sub_resource type="AnimationNodeStateMachineTransition" id=116]
+switch_mode = 2
+auto_advance = true
 
-[sub_resource type="AnimationNodeStateMachineTransition" id=117]
-
-[sub_resource type="AnimationNodeStateMachineTransition" id=118]
-
-[sub_resource type="AnimationNodeStateMachineTransition" id=119]
-
-[sub_resource type="AnimationNodeStateMachineTransition" id=120]
-
-[sub_resource type="AnimationNodeStateMachineTransition" id=121]
-
-[sub_resource type="AnimationNodeStateMachineTransition" id=122]
-
-[sub_resource type="AnimationNodeStateMachineTransition" id=123]
-
-[sub_resource type="AnimationNodeStateMachineTransition" id=124]
-
-[sub_resource type="AnimationNodeStateMachineTransition" id=125]
-
-[sub_resource type="AnimationNodeStateMachineTransition" id=126]
-
-[sub_resource type="AnimationNodeStateMachineTransition" id=127]
-
-[sub_resource type="AnimationNodeStateMachineTransition" id=128]
-
-[sub_resource type="AnimationNodeStateMachine" id=50]
-states/idle0/node = SubResource( 54 )
+[sub_resource type="AnimationNodeStateMachine" id=117]
+states/idle0/node = SubResource( 17 )
 states/idle0/position = Vector2( 794.336, 342.07 )
-states/idle1/node = SubResource( 13 )
+states/idle1/node = SubResource( 18 )
 states/idle1/position = Vector2( 620.727, 560.46 )
-states/idle2/node = SubResource( 55 )
+states/idle2/node = SubResource( 19 )
 states/idle2/position = Vector2( 305.667, 450.641 )
-states/idle3/node = SubResource( 56 )
+states/idle3/node = SubResource( 20 )
 states/idle3/position = Vector2( 451, 280.757 )
-states/spellcast0/node = SubResource( 52 )
+states/slash0/node = SubResource( 21 )
+states/slash0/position = Vector2( 1036.78, 473.196 )
+states/slash1/node = SubResource( 22 )
+states/slash1/position = Vector2( 404.333, 699.196 )
+states/slash2/node = SubResource( 23 )
+states/slash2/position = Vector2( 73, 329.196 )
+states/slash3/node = SubResource( 24 )
+states/slash3/position = Vector2( 612.333, 139.09 )
+states/spellcast0/node = SubResource( 25 )
 states/spellcast0/position = Vector2( 973.667, 342.364 )
-states/spellcast1/node = SubResource( 53 )
+states/spellcast1/node = SubResource( 26 )
 states/spellcast1/position = Vector2( 621.489, 684.393 )
-states/spellcast2/node = SubResource( 16 )
+states/spellcast2/node = SubResource( 27 )
 states/spellcast2/position = Vector2( 101, 450.778 )
-states/spellcast3/node = SubResource( 17 )
+states/spellcast3/node = SubResource( 28 )
 states/spellcast3/position = Vector2( 451.496, 139.371 )
-states/walk0/node = SubResource( 18 )
+states/walk0/node = SubResource( 29 )
 states/walk0/position = Vector2( 795.003, 437.911 )
-states/walk1/node = SubResource( 19 )
+states/walk1/node = SubResource( 30 )
 states/walk1/position = Vector2( 450.455, 561.04 )
-states/walk2/node = SubResource( 20 )
+states/walk2/node = SubResource( 31 )
 states/walk2/position = Vector2( 312.333, 350.331 )
-states/walk3/node = SubResource( 21 )
+states/walk3/node = SubResource( 32 )
 states/walk3/position = Vector2( 604.688, 281.801 )
-transitions = [ "idle2", "spellcast2", SubResource( 57 ), "idle1", "spellcast1", SubResource( 59 ), "idle0", "spellcast0", SubResource( 61 ), "idle3", "spellcast3", SubResource( 64 ), "idle2", "walk2", SubResource( 65 ), "walk2", "idle2", SubResource( 66 ), "idle2", "walk1", SubResource( 67 ), "walk1", "idle2", SubResource( 68 ), "idle2", "walk0", SubResource( 69 ), "walk0", "idle2", SubResource( 70 ), "walk3", "idle2", SubResource( 71 ), "idle2", "walk3", SubResource( 72 ), "idle3", "walk3", SubResource( 73 ), "walk3", "idle3", SubResource( 74 ), "idle3", "walk2", SubResource( 75 ), "walk2", "idle3", SubResource( 76 ), "idle3", "walk1", SubResource( 77 ), "walk1", "idle3", SubResource( 78 ), "idle3", "walk0", SubResource( 79 ), "walk0", "idle3", SubResource( 80 ), "walk2", "idle1", SubResource( 81 ), "idle1", "walk2", SubResource( 82 ), "idle1", "walk3", SubResource( 83 ), "walk3", "idle1", SubResource( 84 ), "idle1", "walk1", SubResource( 85 ), "walk1", "idle1", SubResource( 86 ), "idle1", "walk0", SubResource( 87 ), "walk0", "idle1", SubResource( 88 ), "idle0", "walk1", SubResource( 89 ), "walk1", "idle0", SubResource( 90 ), "idle0", "walk0", SubResource( 91 ), "walk0", "idle0", SubResource( 92 ), "idle0", "walk3", SubResource( 93 ), "walk3", "idle0", SubResource( 94 ), "idle0", "walk2", SubResource( 95 ), "walk2", "idle0", SubResource( 96 ), "walk2", "walk3", SubResource( 97 ), "walk3", "walk2", SubResource( 98 ), "walk2", "walk1", SubResource( 99 ), "walk1", "walk2", SubResource( 100 ), "walk1", "walk0", SubResource( 101 ), "walk0", "walk1", SubResource( 102 ), "walk0", "walk3", SubResource( 103 ), "walk3", "walk0", SubResource( 104 ), "walk0", "walk2", SubResource( 105 ), "walk2", "walk0", SubResource( 106 ), "walk3", "walk1", SubResource( 107 ), "walk1", "walk3", SubResource( 108 ), "spellcast2", "idle2", SubResource( 109 ), "spellcast1", "idle1", SubResource( 110 ), "spellcast0", "idle0", SubResource( 111 ), "spellcast3", "idle3", SubResource( 112 ), "spellcast2", "walk1", SubResource( 113 ), "spellcast2", "walk2", SubResource( 114 ), "spellcast2", "walk3", SubResource( 115 ), "spellcast2", "walk0", SubResource( 116 ), "spellcast1", "walk1", SubResource( 117 ), "spellcast1", "walk0", SubResource( 118 ), "spellcast1", "walk3", SubResource( 119 ), "spellcast1", "walk2", SubResource( 120 ), "spellcast0", "walk0", SubResource( 121 ), "spellcast0", "walk1", SubResource( 122 ), "spellcast0", "walk2", SubResource( 123 ), "spellcast0", "walk3", SubResource( 124 ), "spellcast3", "walk2", SubResource( 125 ), "spellcast3", "walk1", SubResource( 126 ), "spellcast3", "walk0", SubResource( 127 ), "spellcast3", "walk3", SubResource( 128 ) ]
+transitions = [ "idle2", "spellcast2", SubResource( 33 ), "idle1", "spellcast1", SubResource( 34 ), "idle0", "spellcast0", SubResource( 35 ), "idle3", "spellcast3", SubResource( 36 ), "idle2", "walk2", SubResource( 37 ), "walk2", "idle2", SubResource( 38 ), "idle2", "walk1", SubResource( 39 ), "walk1", "idle2", SubResource( 40 ), "idle2", "walk0", SubResource( 41 ), "walk0", "idle2", SubResource( 42 ), "walk3", "idle2", SubResource( 43 ), "idle2", "walk3", SubResource( 44 ), "idle3", "walk3", SubResource( 45 ), "walk3", "idle3", SubResource( 46 ), "idle3", "walk2", SubResource( 47 ), "walk2", "idle3", SubResource( 48 ), "idle3", "walk1", SubResource( 49 ), "walk1", "idle3", SubResource( 50 ), "idle3", "walk0", SubResource( 51 ), "walk0", "idle3", SubResource( 52 ), "walk2", "idle1", SubResource( 53 ), "idle1", "walk2", SubResource( 54 ), "idle1", "walk3", SubResource( 55 ), "walk3", "idle1", SubResource( 56 ), "idle1", "walk1", SubResource( 57 ), "walk1", "idle1", SubResource( 58 ), "idle1", "walk0", SubResource( 59 ), "walk0", "idle1", SubResource( 60 ), "idle0", "walk1", SubResource( 61 ), "walk1", "idle0", SubResource( 62 ), "idle0", "walk0", SubResource( 63 ), "walk0", "idle0", SubResource( 64 ), "idle0", "walk3", SubResource( 65 ), "walk3", "idle0", SubResource( 66 ), "idle0", "walk2", SubResource( 67 ), "walk2", "idle0", SubResource( 68 ), "walk2", "walk3", SubResource( 69 ), "walk3", "walk2", SubResource( 70 ), "walk2", "walk1", SubResource( 71 ), "walk1", "walk2", SubResource( 72 ), "walk1", "walk0", SubResource( 73 ), "walk0", "walk1", SubResource( 74 ), "walk0", "walk3", SubResource( 75 ), "walk3", "walk0", SubResource( 76 ), "walk0", "walk2", SubResource( 77 ), "walk2", "walk0", SubResource( 78 ), "walk3", "walk1", SubResource( 79 ), "walk1", "walk3", SubResource( 80 ), "spellcast2", "idle2", SubResource( 81 ), "spellcast1", "idle1", SubResource( 82 ), "spellcast0", "idle0", SubResource( 83 ), "spellcast3", "idle3", SubResource( 84 ), "spellcast2", "walk1", SubResource( 85 ), "spellcast2", "walk2", SubResource( 86 ), "spellcast2", "walk3", SubResource( 87 ), "spellcast2", "walk0", SubResource( 88 ), "spellcast1", "walk1", SubResource( 89 ), "spellcast1", "walk0", SubResource( 90 ), "spellcast1", "walk3", SubResource( 91 ), "spellcast1", "walk2", SubResource( 92 ), "spellcast0", "walk0", SubResource( 93 ), "spellcast0", "walk1", SubResource( 94 ), "spellcast0", "walk2", SubResource( 95 ), "spellcast0", "walk3", SubResource( 96 ), "spellcast3", "walk2", SubResource( 97 ), "spellcast3", "walk1", SubResource( 98 ), "spellcast3", "walk0", SubResource( 99 ), "spellcast3", "walk3", SubResource( 100 ), "slash2", "walk2", SubResource( 101 ), "walk2", "slash2", SubResource( 102 ), "walk3", "slash3", SubResource( 103 ), "slash3", "walk3", SubResource( 104 ), "walk0", "slash0", SubResource( 105 ), "slash0", "walk0", SubResource( 106 ), "walk1", "slash1", SubResource( 107 ), "slash1", "walk1", SubResource( 108 ), "idle2", "slash2", SubResource( 109 ), "slash2", "idle2", SubResource( 110 ), "idle3", "slash3", SubResource( 111 ), "slash3", "idle3", SubResource( 112 ), "idle0", "slash0", SubResource( 113 ), "slash0", "idle0", SubResource( 114 ), "idle1", "slash1", SubResource( 115 ), "slash1", "idle1", SubResource( 116 ) ]
 start_node = "idle1"
 graph_offset = Vector2( 0, 69.5291 )
 
-[sub_resource type="AnimationNodeStateMachinePlayback" id=51]
+[sub_resource type="AnimationNodeStateMachinePlayback" id=118]
 
 [node name="layerasset" type="Node2D"]
 script = ExtResource( 1 )
@@ -473,19 +601,23 @@ anims/idle0 = SubResource( 1 )
 anims/idle1 = SubResource( 2 )
 anims/idle2 = SubResource( 3 )
 anims/idle3 = SubResource( 4 )
-anims/spellcast0 = SubResource( 5 )
-anims/spellcast1 = SubResource( 6 )
-anims/spellcast2 = SubResource( 7 )
-anims/spellcast3 = SubResource( 8 )
-anims/walk0 = SubResource( 9 )
-anims/walk1 = SubResource( 10 )
-anims/walk2 = SubResource( 11 )
-anims/walk3 = SubResource( 12 )
+anims/slash0 = SubResource( 5 )
+anims/slash1 = SubResource( 6 )
+anims/slash2 = SubResource( 7 )
+anims/slash3 = SubResource( 8 )
+anims/spellcast0 = SubResource( 9 )
+anims/spellcast1 = SubResource( 10 )
+anims/spellcast2 = SubResource( 11 )
+anims/spellcast3 = SubResource( 12 )
+anims/walk0 = SubResource( 13 )
+anims/walk1 = SubResource( 14 )
+anims/walk2 = SubResource( 15 )
+anims/walk3 = SubResource( 16 )
 
 [node name="AnimationTree" type="AnimationTree" parent="."]
-tree_root = SubResource( 50 )
+tree_root = SubResource( 117 )
 anim_player = NodePath("../AnimationPlayer")
 active = true
-parameters/playback = SubResource( 51 )
+parameters/playback = SubResource( 118 )
 
 [connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_AnimationPlayer_animation_finished"]

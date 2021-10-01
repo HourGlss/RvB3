@@ -20,18 +20,20 @@ export var path_to_head = ""
 export var path_to_torso = ""
 export var path_to_legs = ""
 export var path_to_feet = ""
+export var path_to_large_weapon = ""
 
 var direction
 var current_animation
 
 var layerassets = []
-
+var weaponassets = []
 
 func _ready():
 	z_index = 1
 	direction = 1
 	current_animation = "idle"
 	var layerasset = load("res://layerasset.tscn")
+	var large_weapon = load("res://largeweapon.tscn")
 	var frame = layerasset.instance()
 	add_child(frame)
 	var head = layerasset.instance()
@@ -45,6 +47,9 @@ func _ready():
 	var cape = layerasset.instance()
 	add_child(cape)
 	
+	var large = large_weapon.instance()
+	add_child(large)
+	
 	
 	
 	frame.set_sprite_texture(load(path_to_frame))
@@ -53,6 +58,7 @@ func _ready():
 	feet.set_sprite_texture(load(path_to_feet))
 	legs.set_sprite_texture(load(path_to_legs))
 	cape.set_sprite_texture(load(path_to_cape))
+	large.set_sprite_texture(load(path_to_large_weapon))
 	
 	
 	
@@ -62,11 +68,25 @@ func _ready():
 	layerassets.append(feet)
 	layerassets.append(legs)
 	layerassets.append(cape)
+	weaponassets.append(large)
 	
 	set_physics_process(true)
 
+func slash():
+	for e in layerassets:
+		e.play_animation("slash",direction)
+	for e in weaponassets:
+		e.play_animation("slash",direction)
+
+func castdone():
+	cast_spell()
+	cast_finished = true
+	for e in layerassets:
+		e.play_animation("spellcast",direction)
+		
 func cast_spell():
 	$Polygon2D.position = get_local_mouse_position()
+	casting = false
 
 	
 
@@ -100,7 +120,9 @@ func _physics_process(delta):
 				e.play_animation("spellcast",direction)
 		return
 	if Input.is_action_pressed("slash"):
-		pass
+		if not casting:
+			slash()
+		
 		return
 	acc = acc.normalized()
 	acc.x *= ACCEL
@@ -125,6 +147,4 @@ func _physics_process(delta):
 	var result = move_and_slide(vel*delta)
 	
 	
-func castdone():
-	cast_finished = true
-	cast_spell()
+

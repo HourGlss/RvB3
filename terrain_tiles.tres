@@ -1,0 +1,85 @@
+[gd_resource type="TileSet" load_steps=3 format=2]
+
+[ext_resource path="res://Sprite-sheet.png" type="Texture" id=1]
+
+[sub_resource type="ConvexPolygonShape2D" id=1]
+points = PoolVector2Array( 64, 64, 0, 64, 0, 0, 64, 0 )
+
+[resource]
+312266/name = ""
+312266/texture = ExtResource( 1 )
+312266/tex_offset = Vector2( 0, 0 )
+312266/modulate = Color( 1, 1, 1, 1 )
+312266/region = Rect2( 0, 0, 64, 64 )
+312266/tile_mode = 0
+312266/occluder_offset = Vector2( 0, 0 )
+312266/navigation_offset = Vector2( 0, 0 )
+312266/shape_offset = Vector2( 0, 0 )
+312266/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+312266/shape_one_way = false
+312266/shape_one_way_margin = 0.0
+312266/shapes = [  ]
+312266/z_index = 0
+484019/name = ""
+484019/texture = ExtResource( 1 )
+484019/tex_offset = Vector2( 0, 0 )
+484019/modulate = Color( 1, 1, 1, 1 )
+484019/region = Rect2( 192, 0, 64, 64 )
+484019/tile_mode = 0
+484019/occluder_offset = Vector2( 0, 0 )
+484019/navigation_offset = Vector2( 0, 0 )
+484019/shape_offset = Vector2( 0, 0 )
+484019/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+484019/shape_one_way = false
+484019/shape_one_way_margin = 0.0
+484019/shapes = [  ]
+484019/z_index = 0
+1122499/name = ""
+1122499/texture = ExtResource( 1 )
+1122499/tex_offset = Vector2( 0, 0 )
+1122499/modulate = Color( 1, 1, 1, 1 )
+1122499/region = Rect2( 128, 0, 64, 64 )
+1122499/tile_mode = 0
+1122499/occluder_offset = Vector2( 0, 0 )
+1122499/navigation_offset = Vector2( 0, 0 )
+1122499/shape_offset = Vector2( 0, 0 )
+1122499/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+1122499/shape_one_way = false
+1122499/shape_one_way_margin = 0.0
+1122499/shapes = [  ]
+1122499/z_index = 0
+3735709/name = ""
+3735709/texture = ExtResource( 1 )
+3735709/tex_offset = Vector2( 0, 0 )
+3735709/modulate = Color( 1, 1, 1, 1 )
+3735709/region = Rect2( 256, 0, 64, 64 )
+3735709/tile_mode = 0
+3735709/occluder_offset = Vector2( 0, 0 )
+3735709/navigation_offset = Vector2( 0, 0 )
+3735709/shape_offset = Vector2( 0, 0 )
+3735709/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+3735709/shape_one_way = false
+3735709/shape_one_way_margin = 0.0
+3735709/shapes = [  ]
+3735709/z_index = 0
+3809838/name = ""
+3809838/texture = ExtResource( 1 )
+3809838/tex_offset = Vector2( 0, 0 )
+3809838/modulate = Color( 1, 1, 1, 1 )
+3809838/region = Rect2( 64, 0, 64, 64 )
+3809838/tile_mode = 0
+3809838/occluder_offset = Vector2( 0, 0 )
+3809838/navigation_offset = Vector2( 0, 0 )
+3809838/shape_offset = Vector2( 0, 0 )
+3809838/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+3809838/shape = SubResource( 1 )
+3809838/shape_one_way = false
+3809838/shape_one_way_margin = 1.0
+3809838/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 1 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+3809838/z_index = 0

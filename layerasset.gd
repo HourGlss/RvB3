@@ -9,8 +9,8 @@ func _ready():
 
 func set_sprite_texture(texture_to_use):
 	sprite.texture = texture_to_use
-	sprite.scale.x = 2
-	sprite.scale.y = 2
+	sprite.scale.x = 1
+	sprite.scale.y = 1
 	
 func play_animation(animation, direction):
 	var animation_to_play = str(animation)+str(direction)
@@ -21,5 +21,3 @@ func spell_complete():
 	if par != null:
 		par.castdone()
 	print("spell completed")
-	# if par is not None:
-		
