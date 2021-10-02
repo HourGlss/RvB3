@@ -19,7 +19,7 @@ tracks/0/keys = {
 "values": [  ]
 }
 
-[sub_resource type="Animation" id=21]
+[sub_resource type="Animation" id=2]
 resource_name = "idle"
 tracks/0/type = "method"
 tracks/0/path = NodePath("Sprite")
@@ -36,8 +36,7 @@ tracks/0/keys = {
 } ]
 }
 
-[sub_resource type="Animation" id=2]
-resource_name = "slash0"
+[sub_resource type="Animation" id=3]
 length = 0.6
 tracks/0/type = "value"
 tracks/0/path = NodePath("Sprite:frame")
@@ -78,8 +77,7 @@ tracks/2/keys = {
 "values": [ PoolVector2Array( -34.9123, 15.7556, -31.5878, 30.8508, -31.2893, 34.5303, -31.7833, 36.2285, -35.2726, 20.0955, -35.2211, 17.0765 ), PoolVector2Array( -35.3035, 20.4729, -34.9638, 20.7559, -34.9021, 18.6803, -35.3549, 15.0009, -35.602, 14.1518, -35.9931, 14.4348, -35.4887, 20.0011 ), PoolVector2Array( -35.8799, 18.0199, -39.225, 6.22678, -39.3794, 4.52856, -39.1324, 3.39642, -38.8133, 3.67946, -36.0034, 14.7178, -35.8593, 15.85 ), PoolVector2Array( -34.6859, 14.7178, -38.4325, 15.0009, -39.3794, 12.3592, -39.8735, 8.86843, -40.5116, 2.64166, -40.4396, 0.283035, -40.1205, 3.01904, -37.7738, 9.05713, -35.9107, 11.0384, -35.0564, 11.6044 ), PoolVector2Array( -33.5537, -2.73601, -29.8792, -12.3592, -28.9837, -12.2649, -27.5736, -7.83064, -26.9354, -4.24553, -26.7295, 2.35863, -27.1927, 6.79285, -29.4469, 13.3027, -31.6186, 15.1896, -32.5759, 16.0387, -34.9432, 16.5104, -34.9844, 14.1518, -32.617, 14.1518, -31.2172, 12.4535, -29.7968, 10.1893, -29.488, 8.30236, -29.8792, 4.8116, -31.7524, 2.35863, -32.5038, 2.45297, -33.1317, 0.377381 ), PoolVector2Array( -33.1523, -1.60387, -31.7524, -7.83064, -30.3835, -9.05712, -28.9837, -8.49105, -27.2133, -2.54732, -26.8839, -3.11339, -27.1001, -5.00029, -28.5925, -10.0006, -29.9821, -12.7366, -32.0818, -12.6422, -33.8213, -8.20802, -34.3462, -3.86815, -33.7904, -2.54732 ), PoolVector2Array(  ) ]
 }
 
-[sub_resource type="Animation" id=3]
-resource_name = "slash1"
+[sub_resource type="Animation" id=4]
 length = 0.6
 tracks/0/type = "value"
 tracks/0/path = NodePath("Sprite:frame")
@@ -107,9 +105,20 @@ tracks/1/keys = {
 "method": "show"
 } ]
 }
+tracks/2/type = "value"
+tracks/2/path = NodePath("CollisionPolygon2D:polygon")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ PoolVector2Array( -35.8977, 17.4608, -39.225, 32.3925, -39.5716, 36.2048, -39.1037, 36.9991, -35.6551, 20.7966, -35.6724, 18.5727 ), PoolVector2Array( -36.4176, 14.6015, -40.4208, 14.6015, -40.6634, 16.5077, -40.4381, 18.255, -36.3656, 18.255, -36.3483, 16.5077 ), PoolVector2Array( -37.2494, 13.6484, -40.1435, -12.2438, -40.5248, -13.0381, -40.6114, -10.6553, -37.544, 16.6665, -37.2321, 15.5546 ), PoolVector2Array( -36.1576, 15.7134, -37.752, 15.5546, -38.9131, 13.9661, -39.4503, 12.3776, -39.9529, 9.20066, -40.3515, 6.18255, -40.7154, -0.0125266, -40.9061, -10.3376, -41.27, -6.2076, -41.4086, -2.39525, -41.4953, 2.37019, -41.2873, 9.51836, -40.9234, 14.7603, -40.2648, 19.5258, -39.225, 23.0204, -38.1679, 23.6558, -36.9202, 21.2731, -36.0363, 18.8904, -35.967, 16.5077 ), PoolVector2Array( -33.9047, 18.0961, -34.2167, 18.8904, -34.1647, 26.3562, -34.3207, 31.4394, -34.7712, 35.0929, -35.4818, 38.2698, -36.9548, 41.1291, -38.6705, 40.176, -39.6063, 38.7464, -40.4381, 34.1398, -41.1313, 26.5151, -41.9112, 12.3776, -41.6686, 20.9554, -41.062, 32.0748, -39.8836, 43.1941, -38.7225, 49.3892, -37.4574, 53.2016, -35.915, 54.79, -32.0851, 54.6312, -31.9247, 53.8534, -31.9291, 51.2954, -32.813, 37.1579, -33.3155, 27.3093 ), PoolVector2Array( -37.187, 49.1418, -36.7127, 51.2408, -36.3137, 52.2149, -35.8785, 52.4403, -34.9351, 52.7204, -33.8829, 52.1404, -32.6987, 50.1931, -32.0431, 48.6767, -31.5111, 47.0427, -30.5848, 42.4428, -30.0062, 37.8968, -29.3839, 31.8845, -29.1021, 26.8862, -28.943, 20.0549, -28.9102, 12.7082, -28.9734, 9.75698, -29.2047, 7.31058, -33.2776, 7.31058, -33.2634, 11.95, -32.1817, 12.1084, -31.4794, 15.0361, -30.8895, 17.9558, -30.5726, 20.6523, -30.317, 23.3534, -30.1376, 25.9876, -30.0553, 28.7509, -30.1253, 31.4352, -30.2515, 33.9986, -31.2984, 41.945, -32.0737, 45.644, -32.9505, 48.3921, -34.0344, 50.1931, -35.2242, 51.0909, -36.1238, 50.791 ), PoolVector2Array(  ) ]
+}
 
-[sub_resource type="Animation" id=4]
-resource_name = "slash2"
+[sub_resource type="Animation" id=5]
 length = 0.6
 tracks/0/type = "value"
 tracks/0/path = NodePath("Sprite:frame")
@@ -137,9 +146,20 @@ tracks/1/keys = {
 "method": "show"
 } ]
 }
+tracks/2/type = "value"
+tracks/2/path = NodePath("CollisionPolygon2D:polygon")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ PoolVector2Array( -38.3446, 15.8312, -41.6533, 31.3318, -41.9964, 34.7014, -41.5062, 35.6, -38.0996, 19.8749 ), PoolVector2Array( -37.4378, 14.9327, -37.977, 20.3241, -38.4672, 20.5488, -38.075, 15.6066 ), PoolVector2Array( -37.5114, 15.1573, -34.3743, 3.92505, -33.9822, 4.59899, -34.3253, 6.6208, -37.7319, 18.7516 ), PoolVector2Array( -38.4182, 12.2369, -35.6487, 9.31653, -34.1292, 6.39615, -32.8793, 1.22931, -32.8149, 1.10505, -32.769, 2.36725, -32.8975, 3.96604, -33.5034, 9.51973, -33.8265, 11.4629, -34.247, 12.8014, -34.908, 14.9893, -38.6994, 15.5783, -38.626, 13.2222 ), PoolVector2Array( -40.9286, 2.12276, -42.8276, 4.10401, -43.6613, 5.80222, -43.8257, 7.38947, -43.754, 8.9156, -42.5806, 11.8875, -39.678, 14.4348, -38.412, 14.4348, -38.4274, 15.85, -41.6851, 16.133, -44.495, 12.312, -45.6993, 8.49105, -46.533, 3.82097, -46.6365, 1.37989, -46.4867, -1.69821, -46.3054, -4.33218, -45.9309, -6.36829, -45.3707, -8.49724, -44.8384, -9.86575, -44.371, -10.8178, -43.862, -11.6044, -43.1246, -10.9963, -42.3067, -8.91374, -41.3609, -6.08525, -40.1103, -2.54731, -39.8478, -1.83973, -39.9868, 0, -40.311, 0, -40.6198, -0.849105 ), PoolVector2Array( -46.4558, -2.4058, -46.3768, -3.6917, -46.0235, -5.51918, -45.0011, -9.54769, -44.3571, -11.1534, -43.7749, -12.0034, -43.0793, -12.5229, -42.2189, -12.5229, -41.5852, -12.0507, -41.1524, -11.3423, -40.4654, -9.90622, -39.7706, -8.20801, -39.3538, -6.5098, -38.9987, -3.67945, -39.5545, -2.26428, -39.817, -2.4058, -40.0022, -3.67945, -40.2029, -2.4058, -40.9131, -4.95311, -41.9167, -7.64194, -42.7135, -8.8393, -43.5843, -8.98098, -44.248, -8.34953, -44.9119, -6.5098, -45.5758, -4.10401, -46.1779, -1.98124, -46.3304, -1.66099 ), PoolVector2Array(  ) ]
+}
 
-[sub_resource type="Animation" id=5]
-resource_name = "slash3"
+[sub_resource type="Animation" id=6]
 length = 0.6
 tracks/0/type = "value"
 tracks/0/path = NodePath("Sprite:frame")
@@ -180,61 +200,61 @@ tracks/2/keys = {
 "values": [ PoolVector2Array( -39.5675, -2.12463, -39.0045, -2.79781, -38.0987, 1.57782, -38.2823, 5.39249, -39.237, 1.57782 ), PoolVector2Array( -40.6814, 13.695, -40.3999, 11.4511, -38.3068, 11.6754, -38.2456, 16.4999, -40.4488, 16.4999 ), PoolVector2Array( -40.1061, 27.8316, -38.1354, 9.99251, -38.2088, 6.51444, -37.7315, 3.26076, -37.9396, 1.24124, -40.559, 24.8024, -40.5345, 27.6073 ), PoolVector2Array( -40.2655, 5.77047, -41.1204, 15.9222, -41.1982, 25.8957, -41.7519, 20.1966, -41.8685, 11.9149, -41.4022, 1.13988, -40.421, -5.27171, -39.1288, -8.56655, -37.963, -8.1213, -37.6716, -0.552064, -39.1191, 0.605583, -39.9061, 3.72233 ), PoolVector2Array( -41.9028, 1.97862, -41.1585, -11.0322, -40.3795, -20.235, -38.7177, -25.1537, -36.7616, -25.7884, -35.446, -22.4564, -34.3036, -15.1576, -34.1478, -3.73345, -33.9574, -3.25744, -33.6804, -5.79615, -32.0532, -36.7366, -32.0705, -39.4339, -32.2263, -41.338, -36.4327, -40.5446, -37.7137, -37.0539, -39.0293, -32.7698, -40.1199, -25.9471, -41.2797, -13.2536 ), PoolVector2Array( -33.3169, 6.73868, -29.3874, 7.21468, -28.972, 5.62799, -29.0066, -9.60422, -29.5259, -18.4897, -30.4433, -27.3751, -32.0705, -34.5152, -33.5938, -37.0539, -36.2769, -37.5299, -37.3502, -33.8805, -37.1771, -33.2459, -36.1385, -35.6259, -34.2516, -35.6259, -33.0053, -33.7219, -31.5339, -28.0098, -30.3568, -18.9657, -30.1664, -12.3016, -30.6164, -6.43083, -31.6031, 0.550592, -32.434, 2.61328, -33.3169, 2.45462 ), PoolVector2Array(  ) ]
 }
 
-[sub_resource type="AnimationNodeAnimation" id=6]
+[sub_resource type="AnimationNodeAnimation" id=7]
 animation = "idle"
 
-[sub_resource type="AnimationNodeAnimation" id=7]
+[sub_resource type="AnimationNodeAnimation" id=8]
 animation = "slash0"
 
-[sub_resource type="AnimationNodeAnimation" id=8]
+[sub_resource type="AnimationNodeAnimation" id=9]
 animation = "slash1"
 
-[sub_resource type="AnimationNodeAnimation" id=9]
+[sub_resource type="AnimationNodeAnimation" id=10]
 animation = "slash2"
 
-[sub_resource type="AnimationNodeAnimation" id=10]
+[sub_resource type="AnimationNodeAnimation" id=11]
 animation = "slash3"
 
-[sub_resource type="AnimationNodeStateMachineTransition" id=11]
-
 [sub_resource type="AnimationNodeStateMachineTransition" id=12]
-switch_mode = 2
-auto_advance = true
 
 [sub_resource type="AnimationNodeStateMachineTransition" id=13]
 switch_mode = 2
 auto_advance = true
 
 [sub_resource type="AnimationNodeStateMachineTransition" id=14]
-
-[sub_resource type="AnimationNodeStateMachineTransition" id=15]
 switch_mode = 2
 auto_advance = true
 
+[sub_resource type="AnimationNodeStateMachineTransition" id=15]
+
 [sub_resource type="AnimationNodeStateMachineTransition" id=16]
+switch_mode = 2
+auto_advance = true
 
 [sub_resource type="AnimationNodeStateMachineTransition" id=17]
 
 [sub_resource type="AnimationNodeStateMachineTransition" id=18]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=19]
 switch_mode = 2
 auto_advance = true
 
-[sub_resource type="AnimationNodeStateMachine" id=19]
-states/idle/node = SubResource( 6 )
+[sub_resource type="AnimationNodeStateMachine" id=20]
+states/idle/node = SubResource( 7 )
 states/idle/position = Vector2( 527.444, 196.899 )
-states/slash0/node = SubResource( 7 )
+states/slash0/node = SubResource( 8 )
 states/slash0/position = Vector2( 765, 196.307 )
-states/slash1/node = SubResource( 8 )
+states/slash1/node = SubResource( 9 )
 states/slash1/position = Vector2( 526.926, 309.862 )
-states/slash2/node = SubResource( 9 )
+states/slash2/node = SubResource( 10 )
 states/slash2/position = Vector2( 304.334, 196.924 )
-states/slash3/node = SubResource( 10 )
+states/slash3/node = SubResource( 11 )
 states/slash3/position = Vector2( 528.408, 96.5291 )
-transitions = [ "idle", "slash0", SubResource( 11 ), "slash0", "idle", SubResource( 12 ), "slash1", "idle", SubResource( 13 ), "idle", "slash1", SubResource( 14 ), "slash2", "idle", SubResource( 15 ), "idle", "slash2", SubResource( 16 ), "idle", "slash3", SubResource( 17 ), "slash3", "idle", SubResource( 18 ) ]
+transitions = [ "idle", "slash0", SubResource( 12 ), "slash0", "idle", SubResource( 13 ), "slash1", "idle", SubResource( 14 ), "idle", "slash1", SubResource( 15 ), "slash2", "idle", SubResource( 16 ), "idle", "slash2", SubResource( 17 ), "idle", "slash3", SubResource( 18 ), "slash3", "idle", SubResource( 19 ) ]
 start_node = "idle"
 graph_offset = Vector2( 0, 69.5291 )
 
-[sub_resource type="AnimationNodeStateMachinePlayback" id=20]
+[sub_resource type="AnimationNodeStateMachinePlayback" id=21]
 
 [node name="largeweapon" type="Node2D"]
 script = ExtResource( 2 )
@@ -242,27 +262,26 @@ script = ExtResource( 2 )
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
 position = Vector2( 296.743, 0 )
 scale = Vector2( 8.09625, 0.883283 )
-polygon = PoolVector2Array( -39.5675, -2.12463, -39.0045, -2.79781, -38.0987, 1.57782, -38.2823, 5.39249, -39.237, 1.57782 )
 
 [node name="Sprite" type="Sprite" parent="."]
-position = Vector2( 0.00466919, 0.0786552 )
+position = Vector2( 0.144989, 0.0786552 )
 texture = ExtResource( 1 )
-hframes = 6
 vframes = 4
+hframes = 6
+frame = 17
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 autoplay = "idle"
 anims/None = SubResource( 1 )
-anims/idle = SubResource( 21 )
-anims/slash0 = SubResource( 2 )
-anims/slash1 = SubResource( 3 )
-anims/slash2 = SubResource( 4 )
-anims/slash3 = SubResource( 5 )
+anims/idle = SubResource( 2 )
+anims/slash0 = SubResource( 3 )
+anims/slash1 = SubResource( 4 )
+anims/slash2 = SubResource( 5 )
+anims/slash3 = SubResource( 6 )
 
 [node name="AnimationTree" type="AnimationTree" parent="."]
-tree_root = SubResource( 19 )
+tree_root = SubResource( 20 )
 anim_player = NodePath("../AnimationPlayer")
 active = true
-parameters/playback = SubResource( 20 )
-
+parameters/playback = SubResource( 21 )
 [connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_AnimationPlayer_animation_finished"]

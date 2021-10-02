@@ -21,6 +21,5 @@ path_to_large_weapon = "res://weapons/slash/large/male/longsword/longsword_male.
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = ExtResource( 3 )
-show_collision = true
 format = 1
 script = ExtResource( 4 )
