@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/red_ball.png-d33d9239fded319d23455ae37dd59996.stex"
+path="res://.import/redball.png-19e8eabf047b7c493af4245e52ca5c7f.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://png/red_ball.png"
-dest_files=[ "res://.import/red_ball.png-d33d9239fded319d23455ae37dd59996.stex" ]
+source_file="res://png/redball.png"
+dest_files=[ "res://.import/redball.png-19e8eabf047b7c493af4245e52ca5c7f.stex" ]
 
 [params]
 

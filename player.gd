@@ -11,6 +11,8 @@ var laser_color = Color(1.0, .329, .298)
 var casting = false
 var cast_finished = false
 
+var projectile_spell = load("res://projectile cast.tscn")
+
 
 
 export var gender = ""
@@ -21,6 +23,7 @@ export var path_to_torso = ""
 export var path_to_legs = ""
 export var path_to_feet = ""
 export var path_to_large_weapon = ""
+export var path_to_wand = ""
 
 var direction
 var current_animation
@@ -50,6 +53,8 @@ func _ready():
 	var large = large_weapon.instance()
 	add_child(large)
 	
+	var wand = layerasset.instance()
+	add_child(wand)
 	
 	
 	frame.set_sprite_texture(load(path_to_frame))
@@ -59,6 +64,7 @@ func _ready():
 	legs.set_sprite_texture(load(path_to_legs))
 	cape.set_sprite_texture(load(path_to_cape))
 	large.set_sprite_texture(load(path_to_large_weapon))
+	wand.set_sprite_texture(load(path_to_wand))
 	
 	
 	
@@ -69,6 +75,7 @@ func _ready():
 	layerassets.append(legs)
 	layerassets.append(cape)
 	weaponassets.append(large)
+	layerassets.append(wand)
 	
 	set_physics_process(true)
 
@@ -88,6 +95,20 @@ func cast_spell():
 	$Polygon2D.position = get_local_mouse_position()
 	casting = false
 
+func shoot():
+	for e in layerassets:
+		e.play_animation("slash",direction)
+	var current_projectile = projectile_spell.instance()
+	current_projectile.position = position
+	current_projectile.set_target(get_global_mouse_position())
+	var par = get_parent()
+	par.add_child(current_projectile)
+	
+	print("I hit the button")
+	
+		
+		
+	
 	
 
 
@@ -121,7 +142,7 @@ func _physics_process(delta):
 		return
 	if Input.is_action_pressed("slash"):
 		if not casting:
-			slash()
+			shoot()
 		
 		return
 	acc = acc.normalized()

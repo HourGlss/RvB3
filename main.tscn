@@ -17,7 +17,7 @@ path_to_head = "res://body/male/head/hood_male.png"
 path_to_torso = "res://body/male/torso/chest_male.png"
 path_to_legs = "res://body/male/legs/robe_skirt_male.png"
 path_to_feet = "res://body/male/feet/brown_shoes_male.png"
-path_to_large_weapon = "res://weapons/slash/large/male/longsword/longsword_male.png"
+path_to_wand = "res://weapons/slash/woodwand_male.png"
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = ExtResource( 3 )

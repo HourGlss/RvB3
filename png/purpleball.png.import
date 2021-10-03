@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/pngkey.com-crystal-ball-png-191190.png-96db6f8afd9b895d7f3b6e1107265e90.stex"
+path="res://.import/purpleball.png-fc374fed3fab89a74f068abc70902dff.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://png/pngkey.com-crystal-ball-png-191190.png"
-dest_files=[ "res://.import/pngkey.com-crystal-ball-png-191190.png-96db6f8afd9b895d7f3b6e1107265e90.stex" ]
+source_file="res://png/purpleball.png"
+dest_files=[ "res://.import/purpleball.png-fc374fed3fab89a74f068abc70902dff.stex" ]
 
 [params]
 
